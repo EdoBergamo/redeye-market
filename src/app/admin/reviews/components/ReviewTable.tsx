@@ -2,15 +2,14 @@
 
 import { MaxWidthWrapper } from "@/components/MaxWidthWrapper";
 import { Feedback } from '@/components/ReviewSlider';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from "@/components/ui/tooltip";
 import { Rating } from "@material-tailwind/react";
 import { formatDistanceToNow } from "date-fns";
 import { Edit, Info, Trash } from 'lucide-react';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { toast } from "sonner";
-
 
 export const ReviewTable = () => {
   const [feedbacks, setFeedbacks] = useState<Feedback[]>([]);
@@ -125,13 +124,10 @@ export const ReviewTable = () => {
                 {currentFeedbacks.map((feedback) => (
                   <tr key={feedback._id} className='border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted'>
                     <td className='p-4 align-middle [&:has([role=checkbox])]:pr-0'>
-                      <Image
-                        src={feedback.avatar}
-                        alt="Avatar"
-                        width={40}
-                        height={40}
-                        className="object-cover rounded-full"
-                      />
+                      <Avatar>
+                        <AvatarImage src={feedback.avatar} />
+                        <AvatarFallback>{feedback.user}</AvatarFallback>
+                      </Avatar>
                     </td>
                     <td className='p-4 align-middle [&:has([role=checkbox])]:pr-0'>{feedback.user}</td>
                     <td className='p-4 align-middle [&:has([role=checkbox])]:pr-0'>

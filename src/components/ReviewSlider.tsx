@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { MaxWidthWrapper } from "./MaxWidthWrapper";
 import Image from "next/image";
 import { Rating } from "@material-tailwind/react";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 export interface Feedback {
   _id: string;
@@ -62,7 +63,10 @@ export const ReviewSlider = () => {
               <div className="p-4">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
-                    <Image src={feedback.avatar} width={40} height={40} alt={feedback.user} className="w-8 h-8 rounded-full mr-2" />
+                    <Avatar className="mr-2">
+                      <AvatarImage src={feedback.avatar} />
+                      <AvatarFallback>{feedback.user}</AvatarFallback>
+                    </Avatar>
                     <span className="text-sm font-medium text-gray-800">{feedback.user}</span>
                   </div>
                   <Rating

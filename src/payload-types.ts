@@ -42,7 +42,7 @@ export interface Product {
   name: string;
   description: string;
   price: number;
-  category: 'mod_menu' | 'modded_accounts';
+  category: 'rainbow_six';
   product_files: string | ProductFile;
   approvedForSale?: ('pending' | 'approved' | 'denied') | null;
   priceId?: string | null;
