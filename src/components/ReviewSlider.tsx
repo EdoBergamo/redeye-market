@@ -83,7 +83,7 @@ export const ReviewSlider = () => {
               </div>
               <div className="bg-gray-100 py-3 px-4 mt-auto">
                 <div className="flex justify-between items-center text-xs text-gray-500">
-                  <span className="font-light">Reviewed on: {formatReviewDate(feedback.joinedAt)}</span>
+                  <span className="font-light">Joined at: {formatReviewDate(feedback.joinedAt)}</span>
                 </div>
               </div>
             </div>

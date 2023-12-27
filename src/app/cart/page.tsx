@@ -158,7 +158,7 @@ const Page = () => {
             </div>
 
             <div className="mt-6">
-              <Button disabled={items.length === 0 || isLoading} onClick={() => createCheckoutSession({ productIds })} className="w-full" size="lg">
+              <Button disabled={isLoading} onClick={() => createCheckoutSession({ productIds })} className="w-full" size="lg">
                 {isLoading ? <Loader2 className="w-4 h-4 animate-spin mr-1.5" /> : null}
                 Checkout
               </Button>

@@ -36,7 +36,7 @@ export const UserAccountNav = ({ user }: { user: User }) => {
         )}
 
         <DropdownMenuItem>
-          <a href='/'>Reset Password</a>
+          <a href='/account'>Account</a>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
 
