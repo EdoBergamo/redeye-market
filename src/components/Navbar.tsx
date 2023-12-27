@@ -23,9 +23,9 @@ export const Navbar = async () => {
               <MobileNav />
 
               <div className="ml-4 flex lg:ml-0">
-                <Link href='/'>
+                <a href='/'>
                   <Icons.logo className="h-10 w-10" />
-                </Link>
+                </a>
               </div>
 
               <div className="hidden z-50 lg:ml-8 lg:block lg:self-stretch">
@@ -34,8 +34,8 @@ export const Navbar = async () => {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  {user ? null : <Link href='/login' className={buttonVariants()}>Login</Link>}
-                  {user ? <UserAccountNav user={user} /> : <Link href="/register" className={buttonVariants({ variant: "outline" })}>Register</Link>}
+                  {user ? null : <a href='/login' className={buttonVariants()}>Login</a>}
+                  {user ? <UserAccountNav user={user} /> : <a href="/register" className={buttonVariants({ variant: "outline" })}>Register</a>}
                   {!user ? null :
                     <div className="flex lg:ml-6">
                       <span className="h-6 w-px bg-gray-200" aria-hidden='true' />

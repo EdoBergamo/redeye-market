@@ -42,12 +42,12 @@ export const ReceiptEmail = ({ email, date, orderId, products }: ReceiptEmailPro
             <Row style={informationTableRow}>
               <Column style={informationTableColumn}>
                 <Text style={informationTableLabel}>EMAIL</Text>
-                <Link
+                <a
                   style={{
                     ...informationTableValue,
                   }}>
                   {email}
-                </Link>
+                </a>
               </Column>
 
               <Column style={informationTableColumn}>
@@ -59,12 +59,12 @@ export const ReceiptEmail = ({ email, date, orderId, products }: ReceiptEmailPro
 
               <Column style={informationTableColumn}>
                 <Text style={informationTableLabel}>ORDER ID</Text>
-                <Link
+                <a
                   style={{
                     ...informationTableValue,
                   }}>
                   {orderId}
-                </Link>
+                </a>
               </Column>
             </Row>
           </Section>
@@ -96,11 +96,11 @@ export const ReceiptEmail = ({ email, date, orderId, products }: ReceiptEmailPro
                         : product.description}
                     </Text>
                   ) : null}
-                  <Link
+                  <a
                     href={`${process.env.NEXT_PUBLIC_SERVER_URL}/thank-you?orderId=${orderId}`}
                     style={productLink}>
                     Download Asset
-                  </Link>
+                  </a>
                 </Column>
 
                 <Column style={productPriceWrapper} align='right'>
@@ -134,13 +134,13 @@ export const ReceiptEmail = ({ email, date, orderId, products }: ReceiptEmailPro
           <Hr style={productPriceLineBottom} />
 
           <Text style={footerLinksWrapper}>
-            <Link href={`${process.env.NEXT_PUBLIC_SERVER_URL}`}>Store</Link> •{' '}
-            <Link href={`${process.env.NEXT_PUBLIC_SERVER_URL}/products`}>Products</Link> •{' '}
-            <Link href={`${process.env.NEXT_PUBLIC_SERVER_URL}/terms`}>Terms of Sale</Link>
+            <a href={`${process.env.NEXT_PUBLIC_SERVER_URL}`}>Store</a> •{' '}
+            <a href={`${process.env.NEXT_PUBLIC_SERVER_URL}/products`}>Products</a> •{' '}
+            <a href={`${process.env.NEXT_PUBLIC_SERVER_URL}/terms`}>Terms of Sale</a>
           </Text>
           <Text style={footerCopyright}>
             ©{year} RedEye Inc. <br />{' '}
-            <Link href='#'>All rights reserved</Link>
+            <a href='#'>All rights reserved</a>
           </Text>
         </Container>
       </Body>

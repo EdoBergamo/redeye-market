@@ -23,6 +23,7 @@ const FaqPage = () => {
 
   console.log(faqs)
 
+  // TODO: Faq
   return (
     <div className="bg-black">
       {faqs.map((faq, index) => (

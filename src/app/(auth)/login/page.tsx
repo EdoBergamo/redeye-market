@@ -8,13 +8,12 @@ import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
 import { AuthCredentialsValidator, TAuthCredentialsValidator } from "@/lib/validators/accounts-credentials-validator";
 import { trpc } from "@/trpc/client";
-import { toast } from 'sonner'
-import { ZodError } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
+import { toast } from 'sonner';
 
 const Page = () => {
 
@@ -51,10 +50,10 @@ const Page = () => {
               Login to your Account
             </h1>
 
-            <Link className={buttonVariants({ variant: 'link', className: 'text-blue-500 gap-1.5' })} href='/register'>
+            <a className={buttonVariants({ variant: 'link', className: 'text-blue-500 gap-1.5' })} href='/register'>
               Don&apos;t have an account? Sign-up
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
           </div>
 
           <div className="grid gap-6">

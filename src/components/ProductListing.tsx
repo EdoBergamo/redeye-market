@@ -43,7 +43,7 @@ export const ProductListing = ({
 
   if (isVisible && product) {
     return (
-      <Link className={cn("invisible h-full w-full cursor-pointer group/main", { "visible animate-in fade-in-5": isVisible })} href={`/product/${product.id}`}>
+      <a className={cn("invisible h-full w-full cursor-pointer group/main", { "visible animate-in fade-in-5": isVisible })} href={`/product/${product.id}`}>
         <div className="flex flex-col w-full">
           <ImageSlider urls={validUrls} />
 
@@ -51,7 +51,7 @@ export const ProductListing = ({
           <p className='mt-1 text-sm text-gray-500'>{label}</p>
           <p className='mt-1 font-medium text-sm text-gray-900'>{formatPrice(product.price)}</p>
         </div>
-      </Link>
+      </a>
     )
   }
 }

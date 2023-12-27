@@ -60,10 +60,10 @@ const Page = () => {
               Create an Account
             </h1>
 
-            <Link className={buttonVariants({ variant: 'link', className: 'text-blue-500 gap-1.5' })} href='/login'>
+            <a className={buttonVariants({ variant: 'link', className: 'text-blue-500 gap-1.5' })} href='/login'>
               Already have an account? Sign-in
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
           </div>
 
           <div className="grid gap-6">

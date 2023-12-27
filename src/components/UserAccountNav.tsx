@@ -26,14 +26,19 @@ export const UserAccountNav = ({ user }: { user: User }) => {
         {user.role === "admin" && (
           <>
             <DropdownMenuItem>
-              <Link href='/dash'>Dashboard</Link>
+              <a href='/dash'>Dashboard</a>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link href='/admin'>Admin Dashboard</Link>
+              <a href='/admin'>Admin Dashboard</a>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
           </>
         )}
+
+        <DropdownMenuItem>
+          <a href='/'>Reset Password</a>
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
 
         <DropdownMenuItem onClick={signOut} className="cursor-pointer">
           Logout

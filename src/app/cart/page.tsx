@@ -85,7 +85,7 @@ const Page = () => {
                         <div>
                           <div className="flex justify-between">
                             <h3 className="text-sm">
-                              <Link href={`/product/${product.id}`} className="font-medium text-gray-700 hover:text-gray-800">{product.name}</Link>
+                              <a href={`/product/${product.id}`} className="font-medium text-gray-700 hover:text-gray-800">{product.name}</a>
                             </h3>
                           </div>
 

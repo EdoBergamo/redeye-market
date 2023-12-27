@@ -41,13 +41,13 @@ export default function Home({ searchParams }: ProductsPageProps) {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
-            <Link href='https://discord.gg/YcVnq3e8WP' className={buttonVariants()}>
+            <a href='https://discord.gg/YcVnq3e8WP' className={buttonVariants()}>
               <div className="flex justify-center items-center">
                 <FaDiscord className="w-4 mr-2" />
                 Discord
               </div>
-            </Link>
-            <Link href='/products' target="_blank" className={buttonVariants({ variant: 'outline' })}>Our quality promise &rarr;</Link>
+            </a>
+            <a href='/products' target="_blank" className={buttonVariants({ variant: 'outline' })}>Our quality promise &rarr;</a>
           </div>
         </div>
 

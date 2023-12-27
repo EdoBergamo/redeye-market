@@ -63,11 +63,11 @@ const Page = async ({ params }: PageProps) => {
               {BREADCRUMBS.map((breadcrumb, i) => (
                 <li key={breadcrumb.href}>
                   <div className='flex items-center text-sm'>
-                    <Link
+                    <a
                       href={breadcrumb.href}
                       className='font-medium text-sm text-muted-foreground hover:text-gray-900'>
                       {breadcrumb.name}
-                    </Link>
+                    </a>
                     {i !== BREADCRUMBS.length - 1 ? (
                       <svg
                         viewBox='0 0 20 20'

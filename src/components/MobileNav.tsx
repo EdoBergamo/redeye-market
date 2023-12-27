@@ -62,11 +62,11 @@ const MobileNav = () => {
                     <div className='grid grid-cols-2 gap-y-10 gap-x-4'>
                         <div
                           className='group relative text-sm'>
-                          <Link
+                          <a
                             href='/'
                             className='mt-6 block font-medium text-gray-900'>
                             Nome
-                          </Link>
+                          </a>
                         </div>
                     </div>
                   </li>
@@ -75,20 +75,20 @@ const MobileNav = () => {
 
             <div className='space-y-6 border-t border-gray-200 px-4 py-6'>
               <div className='flow-root'>
-                <Link
+                <a
                   onClick={() => closeOnCurrent('/login')}
                   href='/login'
                   className='-m-2 block p-2 font-medium text-gray-900'>
                   Sign in
-                </Link>
+                </a>
               </div>
               <div className='flow-root'>
-                <Link
+                <a
                   onClick={() => closeOnCurrent('/register')}
                   href='/register'
                   className='-m-2 block p-2 font-medium text-gray-900'>
                   Sign up
-                </Link>
+                </a>
               </div>
             </div>
           </div>

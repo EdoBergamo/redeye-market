@@ -33,7 +33,7 @@ export const Footer = () => {
                   <h3 className="font-semibold text-gray-900">Redeem your reward!</h3>
                   <p className="text-muted-foreground mt-2 text-sm">
                     Every two purchases you can redeem a gift, just click below!{' '}
-                    <Link href='https://discord.com' className='whitespace-nowrap font-medium text-black hover:text-zinc-900'>Redeem your gift &rarr;</Link>
+                    <a href='https://discord.com' className='whitespace-nowrap font-medium text-black hover:text-zinc-900'>Redeem your gift &rarr;</a>
                   </p>
                 </div>
               </div>
@@ -48,9 +48,9 @@ export const Footer = () => {
 
           <div className="mt-4 flex items-center justify-center md:mt-0">
             <div className="flex space-x-8">
-              <Link href='#' className="text-sm text-muted-foreground hover:text-gray-600">Cookie Policy</Link>
-              <Link href='/terms' className="text-sm text-muted-foreground hover:text-gray-600">Terms</Link>
-              <Link href='#' className="text-sm text-muted-foreground hover:text-gray-600">Privacy Policy</Link>
+              <a href='#' className="text-sm text-muted-foreground hover:text-gray-600">Cookie Policy</a>
+              <a href='/terms' className="text-sm text-muted-foreground hover:text-gray-600">Terms</a>
+              <a href='#' className="text-sm text-muted-foreground hover:text-gray-600">Privacy Policy</a>
             </div>
           </div>
         </div>

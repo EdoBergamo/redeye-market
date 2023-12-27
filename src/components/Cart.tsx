@@ -60,7 +60,7 @@ export const Cart = () => {
 
               <SheetFooter>
                 <SheetTrigger asChild>
-                  <Link href='/cart' className={buttonVariants({ className: 'w-full' })}>Checkout</Link>
+                  <a href='/cart' className={buttonVariants({ className: 'w-full' })}>Checkout</a>
                 </SheetTrigger>
               </SheetFooter>
             </div>
@@ -73,7 +73,7 @@ export const Cart = () => {
 
             <div className="text-xl font-semibold">Your cart is Empty</div>
             <SheetTrigger asChild>
-              <Link href='/products' className={buttonVariants({ variant: 'link', size: 'sm', className: 'text-sm text-muted-foreground text-blue-500' })}>Browse Products</Link>
+              <a href='/products' className={buttonVariants({ variant: 'link', size: 'sm', className: 'text-sm text-muted-foreground text-blue-500' })}>Browse Products</a>
             </SheetTrigger>
           </div>
         )}

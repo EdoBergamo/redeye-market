@@ -189,11 +189,11 @@ const ThankYouPage = async ({
               <PaymentStatus isPaid={order._isPaid} orderEmail={(order.user as User).email} orderId={order.id} />
 
               <div className='mt-16 border-t border-gray-200 py-6 text-right'>
-                <Link
+                <a
                   href='/products'
                   className='text-sm font-medium text-blue-600 hover:text-blue-500'>
                   Continue shopping &rarr;
-                </Link>
+                </a>
               </div>
             </div>
           </div>
