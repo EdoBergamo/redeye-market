@@ -9,16 +9,19 @@ import { Rating } from "@material-tailwind/react";
 import { formatDistanceToNow } from "date-fns";
 import { Edit, Info, Trash } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { AiOutlineLoading } from "react-icons/ai";
 import { toast } from "sonner";
 
 export const ReviewTable = () => {
   const [feedbacks, setFeedbacks] = useState<Feedback[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
 
   useEffect(() => {
     const fetchFeedbacks = async () => {
       try {
+        setIsLoading(true)
         const response = await fetch('http://localhost:8080/feedbacks');
         if (response.ok) {
           const data = await response.json();
@@ -28,6 +31,8 @@ export const ReviewTable = () => {
         }
       } catch (error) {
         console.error('Error fetching data:', error);
+      } finally {
+        setIsLoading(false)
       }
     };
 
@@ -36,6 +41,7 @@ export const ReviewTable = () => {
 
   const deleteFeedback = async (id: string) => {
     try {
+      setIsLoading(true);
       const response = await fetch(`http://localhost:8080/feedbacks/${id}`, {
         method: 'DELETE',
       });
@@ -51,6 +57,8 @@ export const ReviewTable = () => {
     } catch (error) {
       toast.error('Error deleting feedback. Please try again later.');
       console.error('Error deleting feedback:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -58,6 +66,7 @@ export const ReviewTable = () => {
     const feedbackToUpdate = feedbacks.find((feedback) => feedback._id === id);
 
     try {
+      setIsLoading(true);
       const response = await fetch(`http://localhost:8080/feedbacks/${id}`, {
         method: 'PUT',
         headers: {
@@ -88,6 +97,8 @@ export const ReviewTable = () => {
     } catch (error) {
       toast.error('Error updating feature status. Please try again later.');
       console.error('Error updating feature status:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -101,7 +112,7 @@ export const ReviewTable = () => {
   const MAX_DESCRIPTION_LENGTH = 25;
 
   return (
-    <MaxWidthWrapper className="mt-10">
+    <MaxWidthWrapper className="mt-10 flex flex-col">
       <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">Reviews {feedbacks.length > 0 && `(${feedbacks.length})`}</h1>
       {feedbacks.length > 0 ? (
         <div className="rounded-md border mt-5">
@@ -193,9 +204,16 @@ export const ReviewTable = () => {
           </div>
         </div>
       ) : (
-        <div className="text-center mt-5 text-muted-foreground">
-          <p>No feedback available.</p>
+        <div className="flex items-center justify-center h-full">
+          <div className="flex items-center gap-2">
+            <AiOutlineLoading className="animate-spin w-8 h-8" />
+            <p className="text-muted-foreground">Loading...</p>
+          </div>
         </div>
+      )}
+
+      {!isLoading && feedbacks.length < 0 && (
+        <p>No feedbacks available</p>
       )}
 
       {feedbacks.length > 0 && (
