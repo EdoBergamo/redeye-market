@@ -19,7 +19,7 @@ export const Footer = () => {
             <div className="pb-8 pt-16">
               <div className="flex justify-center">
                 <Icons.logo className="h-12 w-auto dark:hidden" />
-                <Icons.logoDark className="h-12 w-auto hidden dark:block" />
+                <Icons.logoRed className="h-12 w-auto hidden dark:block" />
               </div>
             </div>
           )}
