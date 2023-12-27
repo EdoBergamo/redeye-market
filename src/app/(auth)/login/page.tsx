@@ -51,7 +51,7 @@ const Page = () => {
               Login to your Account
             </h1>
 
-            <a className={buttonVariants({ variant: 'link', className: 'text-blue-500 gap-1.5 dark:text-red-500' })} href='/register'>
+            <a className={buttonVariants({ variant: 'link', className: 'gap-1.5 text-red-500' })} href='/register'>
               Don&apos;t have an account? Sign-up
               <ArrowRight className="w-4 h-4" />
             </a>

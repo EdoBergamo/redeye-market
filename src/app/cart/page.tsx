@@ -7,7 +7,6 @@ import { cn, formatPrice } from "@/lib/utils"
 import { trpc } from "@/trpc/client"
 import { Check, Loader2, X } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 
@@ -106,7 +105,7 @@ const Page = () => {
                       </div>
 
                       <p className="mt-4 flex space-x-2 text-sm text-gray-700 dark:text-gray-200">
-                        <Check className="h-5 w-5 flex-shrink-0 text-blue-500 dark:text-red-500" />
+                        <Check className="h-5 w-5 flex-shrink-0 text-red-500" />
                         <span>Available for Instant Delivery</span>
                       </p>
                     </div>

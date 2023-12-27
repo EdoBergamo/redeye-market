@@ -68,7 +68,7 @@ const ThankYouPage = async ({
       <div>
         <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-32 xl:gap-x-24'>
           <div className='lg:col-start-2'>
-            <p className='text-sm font-medium text-blue-600 dark:text-red-600'>
+            <p className='text-sm font-medium text-red-600'>
               Order successful
             </p>
             <h1 className='mt-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-5xl'>
@@ -147,7 +147,7 @@ const ThankYouPage = async ({
                             <a
                               href={downloadUrl}
                               download={product.name}
-                              className='text-blue-600 dark:text-red-600 hover:underline underline-offset-2'>
+                              className='text-red-600 hover:underline underline-offset-2'>
                               Download asset
                             </a>
                           ) : null}
@@ -190,7 +190,7 @@ const ThankYouPage = async ({
               <div className='mt-16 border-t border-gray-200 py-6 text-right'>
                 <a
                   href='/products'
-                  className='text-sm font-medium text-blue-600 hover:text-blue-500 dark:text-red-600 dark:hover:text-red-500'>
+                  className='text-sm font-medium text-red-600 hover:text-red-500'>
                   Continue shopping &rarr;
                 </a>
               </div>

@@ -25,13 +25,13 @@ const Page = async () => {
             <nav className="p-4">
               <ul>
                 <li className="mb-3">
-                  <a href="/account" className="block text-black dark:text-white py-2 px-4 rounded-md transition duration-300 hover:bg-gray-200 hover:text-blue-600 dark:hover:bg-gray-700 dark:hover:text-red-600">Account</a>
+                  <a href="/account" className="block w-full text-start text-black dark:text-white py-2 px-4 rounded-md transition duration-300 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-red-600 dark:hover:text-red-600">Account</a>
                 </li>
                 <li className="mb-3">
-                  <a href="/account/orders" className="block text-black dark:text-white py-2 px-4 rounded-md transition duration-300 hover:bg-gray-200 hover:text-blue-600 dark:hover:bg-gray-700 dark:hover:text-red-600">Orders</a>
+                  <a href="/account/orders" className="block w-full text-start text-black dark:text-white py-2 px-4 rounded-md transition duration-300 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-red-600 dark:hover:text-red-600">Orders</a>
                 </li>
                 <li>
-                  <button className="block w-full text-start text-black dark:text-white py-2 px-4 rounded-md transition duration-300 hover:bg-gray-200 hover:text-blue-600 dark:hover:bg-gray-700 dark:hover:text-red-600">Sign Out</button>
+                  <button className="block w-full text-start text-black dark:text-white py-2 px-4 rounded-md transition duration-300 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-red-600 dark:hover:text-red-600">Sign Out</button>
                 </li>
               </ul>
             </nav>

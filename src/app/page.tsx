@@ -29,7 +29,7 @@ export default function Home({ searchParams }: ProductsPageProps) {
         <div className="py-20 mx-auto text-center flex flex-col items-center max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-300 sm:text-6xl">
             Your Premier Destination for top-tier{" "}
-            <span className="text-blue-600 dark:text-red-600">Game Cheats</span>. {/* text-transparent bg-gradient-to-t bg-clip-text */}
+            <span className="text-red-600">Game Cheats</span>. {/* text-transparent bg-gradient-to-t bg-clip-text */}
           </h1>
 
           <p className="mt-6 text-lg max-w-prose text-muted-foreground">
@@ -58,7 +58,7 @@ export default function Home({ searchParams }: ProductsPageProps) {
             {perks.map((perk) => (
               <div key={perk.name} className="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
                 <div className="md:flex-shrink-0 flex justify-center">
-                  <div className="h-16 w-16 flex items-center justify-center rounded-full dark:bg-red-100 dark:text-red-900 bg-blue-100 text-blue-900">
+                  <div className="h-16 w-16 flex items-center justify-center rounded-full bg-red-100 text-red-900">
                     {<perk.icon className="w-1/3 h-1/3" />}
                   </div>
                 </div>

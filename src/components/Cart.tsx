@@ -73,7 +73,7 @@ export const Cart = () => {
 
             <div className="text-xl font-semibold">Your cart is Empty</div>
             <SheetTrigger asChild>
-              <a href='/products' className={buttonVariants({ variant: 'link', size: 'sm', className: 'text-sm text-muted-foreground text-blue-500 dark:text-red-500' })}>Browse Products</a>
+              <a href='/products' className={buttonVariants({ variant: 'link', size: 'sm', className: 'text-sm text-muted-foreground text-red-500' })}>Browse Products</a>
             </SheetTrigger>
           </div>
         )}

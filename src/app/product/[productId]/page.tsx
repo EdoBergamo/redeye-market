@@ -109,7 +109,7 @@ const Page = async ({ params }: PageProps) => {
               <div className='mt-6 flex items-center'>
                 <Check
                   aria-hidden='true'
-                  className='h-5 w-5 flex-shrink-0 text-blue-500 dark:text-red-500'
+                  className='h-5 w-5 flex-shrink-0 text-red-500'
                 />
                 <p className='ml-2 text-sm text-muted-foreground'>
                   {/* TODO: Dynamic fetch */}
