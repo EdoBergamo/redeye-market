@@ -28,7 +28,7 @@ export const Cart = () => {
     <Sheet>
       <SheetTrigger className="group -m-2 flex items-center p-2">
         <ShoppingCart aria-hidden='true' className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500" />
-        <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
+        <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800 dark:text-gray-200 dark:group-hover:text-gray-200">
           {isMounted ? itemCount : 0}
         </span>
       </SheetTrigger>
@@ -73,7 +73,7 @@ export const Cart = () => {
 
             <div className="text-xl font-semibold">Your cart is Empty</div>
             <SheetTrigger asChild>
-              <a href='/products' className={buttonVariants({ variant: 'link', size: 'sm', className: 'text-sm text-muted-foreground text-blue-500' })}>Browse Products</a>
+              <a href='/products' className={buttonVariants({ variant: 'link', size: 'sm', className: 'text-sm text-muted-foreground text-blue-500 dark:text-red-500' })}>Browse Products</a>
             </SheetTrigger>
           </div>
         )}

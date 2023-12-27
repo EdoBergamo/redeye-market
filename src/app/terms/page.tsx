@@ -5,7 +5,7 @@ const TermsPage = () => {
   return (
     <MaxWidthWrapper>
       <div className="py-20 mx-auto text-center flex flex-col items-center max-w-3xl">
-        <h1 className="font-bold text-gray-900 text-4xl sm:text-4xl">Terms of Service</h1>
+        <h1 className="font-bold text-gray-900 dark:text-gray-50 text-4xl sm:text-4xl">Terms of Service</h1>
       </div>
       <div className="max-w-3xl mx-auto px-4">
         <h2 className="text-2xl font-semibold mb-4">Overview</h2>

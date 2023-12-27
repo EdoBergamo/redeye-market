@@ -45,12 +45,13 @@ const Page = () => {
       <div className="container relative flex pt-20 flex-col items-center justify-center lg:px-0">
         <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
           <div className="flex flex-col items-center space-y-2 text-center">
-            <Icons.logo className="h-20 w-20" />
+            <Icons.logo className="h-20 w-20 dark:hidden" />
+            <Icons.logoDark className="h-20 w-20 hidden dark:block" />
             <h1 className="text-2xl font-bold">
               Login to your Account
             </h1>
 
-            <a className={buttonVariants({ variant: 'link', className: 'text-blue-500 gap-1.5' })} href='/register'>
+            <a className={buttonVariants({ variant: 'link', className: 'text-blue-500 gap-1.5 dark:text-red-500' })} href='/register'>
               Don&apos;t have an account? Sign-up
               <ArrowRight className="w-4 h-4" />
             </a>

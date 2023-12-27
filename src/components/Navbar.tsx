@@ -9,22 +9,24 @@ import { getServerSideUser } from "@/lib/payload-utils"
 import { cookies } from 'next/headers'
 import { UserAccountNav } from "./UserAccountNav"
 import MobileNav from "./MobileNav"
+import { ModeToggle } from "./Toggle"
 
 export const Navbar = async () => {
   const nextCookies = cookies()
   const { user } = await getServerSideUser(nextCookies);
 
   return (
-    <div className="bg-white sticky z-50 top-0 inset-x-0 h-16">
-      <header className="relative bg-white">
+    <div className="bg-white dark:bg-black sticky z-50 top-0 inset-x-0 h-16">
+      <header className="relative bg-white dark:bg-black">
         <MaxWidthWrapper>
-          <div className="border-b border-gray-200">
+          <div className="border-b border-gray-200 dark:border-gray-700">
             <div className="flex h-16 items-center">
               <MobileNav />
 
               <div className="ml-4 flex lg:ml-0">
                 <a href='/'>
-                  <Icons.logo className="h-10 w-10" />
+                  <Icons.logo className="h-10 w-10 dark:hidden" />
+                  <Icons.logoDark className="h-10 w-10 hidden dark:block" />
                 </a>
               </div>
 
@@ -38,12 +40,15 @@ export const Navbar = async () => {
                   {user ? <UserAccountNav user={user} /> : <a href="/register" className={buttonVariants({ variant: "outline" })}>Register</a>}
                   {!user ? null :
                     <div className="flex lg:ml-6">
-                      <span className="h-6 w-px bg-gray-200" aria-hidden='true' />
+                      <span className="h-6 w-px bg-gray-200 dark:bg-gray-700" aria-hidden='true' />
 
                       <div className="ml-4 flow-root lg:ml-6">
                         <Cart />
                       </div>
                     </div>}
+
+                    <span className="h-6 w-px bg-gray-200 dark:bg-gray-700" aria-hidden='true' />
+                    <ModeToggle />
                 </div>
               </div>
             </div>

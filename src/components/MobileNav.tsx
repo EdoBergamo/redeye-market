@@ -2,7 +2,6 @@
 
 // TODO: Fix Mobile Menu
 import { Menu, X } from 'lucide-react'
-import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
@@ -45,7 +44,7 @@ const MobileNav = () => {
 
       <div className='fixed overflow-y-scroll overscroll-y-none inset-0 z-40 flex'>
         <div className='w-4/5'>
-          <div className='relative flex w-full max-w-sm flex-col overflow-y-auto bg-white pb-12 shadow-xl'>
+          <div className='relative flex w-full max-w-sm flex-col overflow-y-aut pb-12 shadow-xl'>
             <div className='flex px-4 pb-2 pt-5'>
               <button
                 type='button'
@@ -64,7 +63,7 @@ const MobileNav = () => {
                           className='group relative text-sm'>
                           <a
                             href='/'
-                            className='mt-6 block font-medium text-gray-900'>
+                            className='mt-6 block font-medium text-gray-900 dark:text-gray-50'>
                             Nome
                           </a>
                         </div>
@@ -73,12 +72,12 @@ const MobileNav = () => {
               </ul>
             </div>
 
-            <div className='space-y-6 border-t border-gray-200 px-4 py-6'>
+            <div className='space-y-6 border-t border-gray-200 dark:border-gray-700 px-4 py-6'>
               <div className='flow-root'>
                 <a
                   onClick={() => closeOnCurrent('/login')}
                   href='/login'
-                  className='-m-2 block p-2 font-medium text-gray-900'>
+                  className='-m-2 block p-2 font-medium text-gray-900 dark:text-gray-50'>
                   Sign in
                 </a>
               </div>
@@ -86,7 +85,7 @@ const MobileNav = () => {
                 <a
                   onClick={() => closeOnCurrent('/register')}
                   href='/register'
-                  className='-m-2 block p-2 font-medium text-gray-900'>
+                  className='-m-2 block p-2 font-medium text-gray-900 dark:text-gray-50'>
                   Sign up
                 </a>
               </div>

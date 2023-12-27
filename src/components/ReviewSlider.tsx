@@ -56,10 +56,10 @@ export const ReviewSlider = () => {
   return (
     <MaxWidthWrapper>
       <div className="py-20 mx-auto text-center flex flex-col items-center max-w-3xl">
-        <h1 className="font-bold text-gray-900 text-4xl sm:text-4xl">Reviews</h1>
-        <div className="flex flex-wrap justify-center gap-8 pt-12"> {/* Increased gap between cards */}
+        <h1 className="font-bold text-gray-900 dark:text-gray-50 text-4xl sm:text-4xl">Reviews</h1>
+        <div className="flex flex-wrap justify-center gap-8 pt-12">
           {featuredFeedbacks.map((feedback) => (
-            <div key={feedback._id} className="flex items-stretch flex-col overflow-hidden bg-white shadow-lg rounded-lg w-[306px] my-4 ml-4 transition duration-300 ease-in-out transform hover:scale-105">
+            <div key={feedback._id} className="flex items-stretch flex-col bg-white dark:bg-black overflow-hidden shadow-lg rounded-lg w-[306px] my-4 ml-4 transition duration-300 ease-in-out transform hover:scale-105">
               <div className="p-4">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
@@ -67,7 +67,7 @@ export const ReviewSlider = () => {
                       <AvatarImage src={feedback.avatar} />
                       <AvatarFallback>{feedback.user}</AvatarFallback>
                     </Avatar>
-                    <span className="text-sm font-medium text-gray-800">{feedback.user}</span>
+                    <span className="text-sm font-medium text-gray-800 dark:text-gray-100">{feedback.user}</span>
                   </div>
                   <Rating
                     placeholder=''
@@ -81,7 +81,7 @@ export const ReviewSlider = () => {
                 <h3 className="text-lg font-semibold mb-2">{feedback.title}</h3>
                 <p className="text-sm text-gray-700">{feedback.description}</p>
               </div>
-              <div className="bg-gray-100 py-3 px-4 mt-auto">
+              <div className="bg-gray-100 dark:bg-gray-800 py-3 px-4 mt-auto">
                 <div className="flex justify-between items-center text-xs text-gray-500">
                   <span className="font-light">Joined at: {formatReviewDate(feedback.joinedAt)}</span>
                 </div>

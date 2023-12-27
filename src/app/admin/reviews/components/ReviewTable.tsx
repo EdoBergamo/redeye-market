@@ -113,12 +113,12 @@ export const ReviewTable = () => {
 
   return (
     <MaxWidthWrapper className="mt-10 flex flex-col">
-      <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">Reviews {feedbacks.length > 0 && `(${feedbacks.length})`}</h1>
+      <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-50 sm:text-3xl">Reviews {feedbacks.length > 0 && `(${feedbacks.length})`}</h1>
       {feedbacks.length > 0 ? (
-        <div className="rounded-md border mt-5">
+        <div className="rounded-md border dark:border-gray-800 mt-5">
           <div className='relative w-full overflow-auto'>
             <table className='w-full caption-bottom text-sm'>
-              <thead className='[&_tr]:border-b'>
+              <thead className='[&_tr]:border-b dark:[&_tr]:border-gray-800'>
                 <tr className='border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted'>
                   <th className='h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0'>Avatar</th>
                   <th className='h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0'>User</th>
@@ -189,11 +189,11 @@ export const ReviewTable = () => {
                     <td className='p-4 align-middle [&:has([role=checkbox])]:pr-0'>{formatDistanceToNow(new Date(feedback.joinedAt), { addSuffix: true })}</td>
                     <td className='p-4 align-middle [&:has([role=checkbox])]:pr-0'>{feedback.featured ? 'Featured' : 'Pending'}</td>
                     <td className='p-4 space-x-2 align-middle [&:has([role=checkbox])]:pr-0'>
-                      <Button onClick={() => handleFeatureToggle(feedback._id, feedback.featured)} variant='secondary' className='hover:bg-white' size='sm'>
+                      <Button onClick={() => handleFeatureToggle(feedback._id, feedback.featured)} variant='secondary' className='hover:bg-white dark:bg-black dark:hover:bg-gray-800' size='sm'>
                         <Edit className='w-4 h-4' />
                       </Button>
 
-                      <Button onClick={() => deleteFeedback(feedback._id)} variant='outline' className='bg-[#ffe4e6]' size='sm'>
+                      <Button onClick={() => deleteFeedback(feedback._id)} variant='outline' className='bg-[#ffe4e6] dark:bg-background dark:hover:bg-gray-800' size='sm'>
                         <Trash className='w-4 h-4 text-red-600' />
                       </Button>
                     </td>

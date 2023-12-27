@@ -18,25 +18,25 @@ const Page = async () => {
     <MaxWidthWrapper>
       <div className="py-8 md:py-16">
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="md:col-span-1 bg-white rounded-lg shadow-md">
-            <div className="text-gray-800 bg-gray-100 rounded-t-lg px-6 py-4 border-b border-gray-300">
-              <h2 className="text-2xl font-bold">Account</h2>
+          <div className="md:col-span-1 bg-white dark:bg-black rounded-lg shadow-md">
+            <div className="text-gray-800 bg-gray-100 dark:bg-gray-900 rounded-t-lg px-6 py-4 border-b border-gray-300">
+              <h2 className="text-2xl font-bold dark:text-white">Account</h2>
             </div>
             <nav className="p-4">
               <ul>
                 <li className="mb-3">
-                  <a href="/account" className="block text-black py-2 px-4 rounded-md transition duration-300 hover:bg-gray-200 hover:text-blue-600">Account</a>
+                  <a href="/account" className="block text-black dark:text-white py-2 px-4 rounded-md transition duration-300 hover:bg-gray-200 hover:text-blue-600 dark:hover:bg-gray-700 dark:hover:text-red-600">Account</a>
                 </li>
                 <li className="mb-3">
-                  <a href="/account/orders" className="block text-black py-2 px-4 rounded-md transition duration-300 hover:bg-gray-200 hover:text-blue-600">Orders</a>
+                  <a href="/account/orders" className="block text-black dark:text-white py-2 px-4 rounded-md transition duration-300 hover:bg-gray-200 hover:text-blue-600 dark:hover:bg-gray-700 dark:hover:text-red-600">Orders</a>
                 </li>
                 <li>
-                  <button className="block text-black py-2 px-4 rounded-md transition duration-300 hover:bg-gray-200 hover:text-blue-600">Sign Out</button>
+                  <button className="block w-full text-start text-black dark:text-white py-2 px-4 rounded-md transition duration-300 hover:bg-gray-200 hover:text-blue-600 dark:hover:bg-gray-700 dark:hover:text-red-600">Sign Out</button>
                 </li>
               </ul>
             </nav>
           </div>
-          <div className="md:col-span-2 bg-white p-6 shadow-md rounded-lg">
+          <div className="md:col-span-2 bg-white dark:bg-black p-6 shadow-md rounded-lg">
             <h2 className="text-2xl font-bold mb-6">Account Information</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>

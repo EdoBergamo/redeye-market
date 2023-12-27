@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { MaxWidthWrapper } from "./MaxWidthWrapper"
 import { Icons } from "./Icons";
 import Link from "next/link";
+import { ModeToggle } from "./Toggle";
 
 export const Footer = () => {
   const pathname = usePathname();
@@ -11,13 +12,14 @@ export const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-white flex-grow-0">
+    <footer className="flex-grow-0">
       <MaxWidthWrapper>
-        <div className="border-t border-gray-200">
+        <div className="border-t border-gray-200 dark:border-gray-700">
           {pathsToMinimize.includes(pathname) ? null : (
             <div className="pb-8 pt-16">
               <div className="flex justify-center">
-                <Icons.logo className="h-12 w-auto" />
+                <Icons.logo className="h-12 w-auto dark:hidden" />
+                <Icons.logoDark className="h-12 w-auto hidden dark:block" />
               </div>
             </div>
           )}
@@ -26,14 +28,14 @@ export const Footer = () => {
             <div>
               <div className="relative flex items-center px-6 py-6 sm:py-8 lg:mt-0">
                 <div className="absolute inset-0 overflow-hidden rounded-lg">
-                  <div aria-hidden='true' className="absolute bg-zinc-50 inset-0 bg-gradient-to-br bg-opacity-90" />
+                  <div aria-hidden='true' className="absolute inset-0 bg-gradient-to-br bg-opacity-90" />
                 </div>
 
                 <div className="text-center relative mx-auto max-w-sm">
-                  <h3 className="font-semibold text-gray-900">Redeem your reward!</h3>
+                  <h3 className="font-semibold text-gray-900 dark:text-gray-50">Redeem your reward!</h3>
                   <p className="text-muted-foreground mt-2 text-sm">
                     Every two purchases you can redeem a gift, just click below!{' '}
-                    <a href='https://discord.com' className='whitespace-nowrap font-medium text-black hover:text-zinc-900'>Redeem your gift &rarr;</a>
+                    <a href='https://discord.com' className='whitespace-nowrap font-medium text-black dark:text-white hover:text-zinc-900'>Redeem your gift &rarr;</a>
                   </p>
                 </div>
               </div>
